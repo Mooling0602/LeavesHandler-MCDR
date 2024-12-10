@@ -1,0 +1,15 @@
+{
+    "id": "leaves_handler",
+    "version": "0.1.0",
+    "name": "LeavesHandler",
+    "description": {
+      "en_us": "A server handler for Leaves(a fork of Paper).",
+      "zh_cn": "适用于Leaves（Paper的一个分支）的服务端处理器。"
+    },
+    "author": "Mooling0602",
+    "link":"https://github.com/Mooling0602/LeavesHandler-MCDR",
+    "entrypoint": "leaves_handler.handler",
+    "dependencies": {
+      "mcdreforged": ">=2.13.0"
+    }
+}
