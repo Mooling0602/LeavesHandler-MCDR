@@ -1,7 +1,5 @@
 import re
 
-# A useful util to remove ANSI codes simply.
-from strip_ansi import strip_ansi
 # Import apis from MCDReforged for build a server handler.
 from typing_extensions import override
 from mcdreforged.utils import string_utils
@@ -9,6 +7,16 @@ from mcdreforged.info_reactor.info import InfoSource, Info
 from mcdreforged.handler.impl import BukkitHandler
 # Import a basic plugin api provided by MCDReforged.
 from mcdreforged.api.types import PluginServerInterface
+
+def strip_ansi(o: str) -> str:
+    """
+    Removes ANSI escape sequences from `o`, as defined by ECMA-048 in
+    https://www.ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf
+    """
+
+    pattern = re.compile(r'\x1B\[\d+(;\d+){0,2}m')
+    stripped = pattern.sub('', o)
+    return stripped
 
 # Core codes for this handler.
 class LeavesHandler(BukkitHandler):
