@@ -1,6 +1,6 @@
 {
     "id": "leaves_handler",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "name": "LeavesHandler",
     "description": {
       "en_us": "A server handler for Leaves(a fork of Paper).",
