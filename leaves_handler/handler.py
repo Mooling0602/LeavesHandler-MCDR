@@ -8,6 +8,7 @@ from mcdreforged.handler.impl import BukkitHandler
 # Import a basic plugin api provided by MCDReforged.
 from mcdreforged.api.types import PluginServerInterface
 
+
 def strip_ansi(o: str) -> str:
     """
     Removes ANSI escape sequences from `o`, as defined by ECMA-048 in
