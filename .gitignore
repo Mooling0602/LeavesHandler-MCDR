@@ -1,1 +1,5 @@
 __pycache__/
+.ruff_cache/
+uv.lock
+.python-version
+*.mcdr

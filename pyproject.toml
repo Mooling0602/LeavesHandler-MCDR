@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "leaves-handler"
+dynamic = ["version"]
+description = "A plugin-build server handler of MCDReforged for Leaves(a fork of Paper)."
+authors = [{ name = "Mooling0602", email = "clemooling@outlook.top" }]
+requires-python = ">=3.12"
+dependencies = ["mcdreforged>=2.15.7"]
+
+[dependency-groups]
+dev = ["ruff>=0.15.12", "ty>=0.0.33"]
+
+[tool.hatch.version]
+source = "regex"
+path = "src/mcdreforged.plugin.json"
+pattern = '"version"\s*:\s*"(?P<version>[^"]+)"'
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/leaves_handler"]
