@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "-----  ty  -----"
 ty check src
 echo "----- ruff -----"
