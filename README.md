@@ -10,7 +10,7 @@ But it does support and could be managed by [HandlerManager](https://github.com/
 
 > LeavesHandler 是一个独立的服务端处理器，不提供任何 handler mixin 类。
 >
-> 但它支持 [HandlerManager](https://github.com/Mooling0602/HandlerManager-MCDR) 并受其管理。
+> 但它支持 [HandlerManager](https://github.com/Mooling0602/HandlerManager-MCDR) 并可受其管理。
 
 ## NOTE / 注意事项
 LeavesHandler is only designed for English log outputs.
