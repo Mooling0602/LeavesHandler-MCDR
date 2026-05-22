@@ -1,10 +1,11 @@
 from mcdreforged.api.all import (
+    PluginEvent,
     PluginServerInterface,
     Serializable,
     ServerInterface,
-    PluginEvent,
     new_thread,
 )
+
 from leaves_handler.handler import LeavesHandler
 
 psi: PluginServerInterface = ServerInterface.psi()
