@@ -1,10 +1,11 @@
 import re
 
 # Import apis from MCDReforged for build a server handler.
-from typing_extensions import override
-from mcdreforged.utils import string_utils
-from mcdreforged.info_reactor.info import InfoSource, Info
+from typing import override
+
 from mcdreforged.handler.impl import BukkitHandler
+from mcdreforged.info_reactor.info import Info, InfoSource
+from mcdreforged.utils import string_utils
 
 
 def strip_ansi(o: str) -> str:
@@ -42,8 +43,10 @@ class LeavesHandler(BukkitHandler):
     def parse_player_left(self, info: Info):
         if info.content is None:
             return None
-        if not info.is_user:
-            if (m := self.__player_left_regex.fullmatch(info.content)) is not None:
-                if self._verify_player_name(m["name"]):
-                    return m["name"]
+        if (
+            not info.is_user
+            and (m := self.__player_left_regex.fullmatch(info.content)) is not None
+            and self._verify_player_name(m["name"])
+        ):
+            return m["name"]
         return None

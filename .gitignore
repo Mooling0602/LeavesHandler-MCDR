@@ -4,3 +4,4 @@ uv.lock
 .python-version
 *.mcdr
 .vscode/
+.trae/
